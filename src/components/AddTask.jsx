@@ -13,20 +13,18 @@ const AddTask = ({ handleTaskAddition }) => {
     }
 
     const handleAddTaskClick = () => {
-        handleTaskAddition(inputData)
-        setInputData('')
-    }
+        if (inputData.length !== 0) {
+            handleTaskAddition(inputData)
+            setInputData('')
+        }
 
-    const handleEmptyForm = () => {
-        if (inputData.length === 0) return true;
-        return false;
     }
 
     return (
         <div className="add-task-container">
             <input onChange={handleInputChange} value={inputData} className="add-task-input" type="text" />
             <div className="add-task-button-container">
-                <Button onClick={handleAddTaskClick} children="Adicionar" handleEmptyForm={handleEmptyForm} />
+                <Button onClick={handleAddTaskClick} children="Adicionar" />
             </div>
         </div>
     )

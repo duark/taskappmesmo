@@ -1,6 +1,7 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import axios from 'axios'
 
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
@@ -11,18 +12,18 @@ import './App.css';
 
 const App = () => {
 
-  const [tasks, setTasks] = React.useState([
-    {
-      id: "1",
-      title: "Estudar Programação",
-      completed: false,
-    },
-    {
-      id: "2",
-      title: "Ler Livros",
-      completed: true,
+  const [tasks, setTasks] = React.useState([]);
+
+  React.useEffect(() => {
+    //console.log('task mudou')
+    console.log('foi renderizado pela primeira vez')
+    const fetchTasks = async () => {
+      const { data } = await axios.get('https://jsonplaceholder.cypress.io/todos?_limit=10')
+      //console.log(data)
+      setTasks(data)
     }
-  ]);
+    fetchTasks();
+  }, [])
 
   const handleTaskClick = (taskId) => {
     const newTasks = tasks.map((task) => {

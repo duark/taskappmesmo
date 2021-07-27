@@ -13,5 +13,11 @@ Link https://stackoverflow.com/questions/41488715/how-to-disable-button-in-react
 
 ## Tarefas restantes
 
-- terminar restante da video aula
-- corrigir problema de validação de formulário em branco
+ok - terminar restante da video aula
+ok - corrigir problema de validação de formulário em branco
+
+# Libs
+
+Axios: https://www.npmjs.com/package/axios
+UUID: https://www.npmjs.com/package/uuid
+React Router: https://www.npmjs.com/package/react-router
