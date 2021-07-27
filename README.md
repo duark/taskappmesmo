@@ -1,9 +1,13 @@
 # taskappmesmo
 
+app de tarefas com objetivo de estudo seguindo o tutorial de @dicasparadevs (link abaixo)
+
 link tutorial https://www.youtube.com/watch?v=ErjWNvP6mko
 repositorio original https://github.com/felipemotarocha/curso-react-dicasparadevs
 
-em 26/07/2021
+finalziado em 27/07/2021
+
+terá alguns incrementos com a finalidade de estudos
 
 # Ref / Heps
 
